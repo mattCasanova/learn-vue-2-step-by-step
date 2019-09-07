@@ -18,9 +18,9 @@
 <body>
 
     <div id="root" class="container">
-        
-        <vml-message title="Hello World" body="Lorem ipsum dolor sit amet."></vml-message>
-        <vml-message title="Hello Uni" body="Bla Bla Bla"></vml-message>
+        <vml-modal v-if="showModal" @close="showModal = false" content="Some Content Here"></vml-modal>   
+
+        <button @click="showModal = true">Show Modal</button>
     </div>
 
 

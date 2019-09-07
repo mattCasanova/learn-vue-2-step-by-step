@@ -1,3 +1,29 @@
+Vue.component('vml-modal', {
+
+    props: ['content'],
+
+    data() {
+        return {
+            isActive: true
+        }
+    },
+
+    template: `
+        <div class="modal is-active">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <p>{{ content }}</p>
+                </div>
+            </div>
+            <button class="modal-close is-large" @click="$emit('close') "aria-label="close"></button>
+        </div>  
+    `
+
+
+})
+
+
 Vue.component('vml-message', {
 
     props: ['title', 'body'],
@@ -34,6 +60,10 @@ Vue.component('vml-message', {
 
 
 new Vue({
-    el: '#root'
+    el: '#root',
+
+    data: {
+        showModal: false
+    }
 });
 
