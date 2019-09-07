@@ -3,19 +3,21 @@
 
 <head>
     <title></title>
+
+
+    <style>
+        .color-red { color: red; }
+        .is-loading { background: red; }
+        .not-is-loading { background: blue; }
+    </style>
+
 </head>
+
 
 <body>
 
     <div id="root">
-        
-        <ul>
-            <li v-for="name in names" v-text="name"></li>
-        </ul>
-
-        <input id="input" type="text">
-        <button id="button">Add Name</button>
-
+        <button :class="{ 'is-loading': isLoading }" @click="toggleClass">Click Me</button>
 
     </div>
 
@@ -27,20 +29,20 @@
 
         
     
-        const app = new Vue({
+        new Vue({
             el: '#root',
             data: {
-                names: ['Joe', 'Mary', 'Jane', 'Jack']
+                isLoading: false,
+               className: 'color-red'
             }, 
 
-            mounted() {
-                document.querySelector('#button').addEventListener('click', () => {
-                    const name = document.querySelector('#input');
-                    app.names.push(name.value);
-                    name.value = '';
 
-                });
+            methods: {
+                toggleClass() {
+                    this.isLoading = !this.isLoading;
+                }
             },
+
         });
 
 
