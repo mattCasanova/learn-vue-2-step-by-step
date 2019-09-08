@@ -18,25 +18,29 @@
 <body>
 
     <div id="root" class="container">
-       
-        <vml-tabs>
-            <vml-tab name="About Us" :selected="true">
-                <h1>Here is the content for about us tab</h1>
-            </vml-tab>
+        <!-- 
 
-            <vml-tab name="About Our Culture" >
-                <h1>Here is the content for about our culture tab</h1>
-            </vml-tab>
+            <vml-tabs>
+                <vml-tab name="About Us" :selected="true">
+                    <h1>Here is the content for about us tab</h1>
+                </vml-tab>
+                
+                <vml-tab name="About Our Culture" >
+                    <h1>Here is the content for about our culture tab</h1>
+                </vml-tab>
+                
+                <vml-tab name="About Our Vision" >
+                    <h1>Here is the content for about our vision tab</h1>
+                </vml-tab>
+                
+                <vml-tab name="About Our Other Thing" >
+                    <h1>Here is the content for about our other things tab</h1>
+                </vml-tab>
+            </vml-tabs>
+        -->
 
-            <vml-tab name="About Our Vision" >
-                <h1>Here is the content for about our vision tab</h1>
-            </vml-tab>
-
-            <vml-tab name="About Our Other Thing" >
-                <h1>Here is the content for about our other things tab</h1>
-            </vml-tab>
-
-        </vml-tabs>
+        <vml-coupon v-on:applied="onCouponApplied"></vml-coupon>
+        <h1 v-if="couponApplied">You applied a coupon</h1>
     </div>
 
 

@@ -121,12 +121,34 @@ Vue.component('vml-tab', {
 });
 
 
+Vue.component('vml-coupon', {
+
+    template: `
+        <input placeholder="Enter your coupon code" @blur="onCouponApplied">
+
+
+    `,
+
+    methods: {
+        onCouponApplied() {
+            this.$emit('applied', this.coupon);
+        }
+    },
+
+});
 
 new Vue({
     el: '#root',
 
     data: {
-        showModal: false
-    }
+        couponApplied: false
+    },
+
+
+    methods: {
+        onCouponApplied() {
+            this.couponApplied = true;
+        }
+    },
 });
 
