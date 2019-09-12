@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "prod": "NODE_ENV=production webpack --hide-modules",
+    "dev": "webpack --hide-modules",
+    "watch": "npm run dev -- --watch"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "axios": "^0.15.3",
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "jquery": "^3.1.0",
+    "laravel-elixir": "^6.0.0-14",
+    "laravel-elixir-vue-2": "^0.2.0",
+    "laravel-elixir-webpack-official": "^1.0.2",
+    "lodash": "^4.16.2",
+    "vue": "^2.1.8",
+    "vue-resource": "^1.0.3",
+    "webpack": "^4.39.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "@webpack-cli/init": "^0.2.2",
+    "babel-loader": "^8.0.6",
+    "webpack-cli": "^3.3.8"
+  }
+}
