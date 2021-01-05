@@ -9,7 +9,7 @@
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
-    "axios": "^0.15.3",
+    "axios": "^0.21.1",
     "bootstrap-sass": "^3.3.7",
     "fibers": "^4.0.1",
     "gulp": "^3.9.1",
